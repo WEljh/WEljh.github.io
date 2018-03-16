@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>C.Ronaldo</title>
+  
+  <subtitle>Hala Madrid</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-03-15T07:07:44.322Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>CR777</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows安装教程</title>
+    <link href="http://yoursite.com/2018/03/13/Windows/"/>
+    <id>http://yoursite.com/2018/03/13/Windows/</id>
+    <published>2018-03-13T13:00:00.000Z</published>
+    <updated>2018-03-15T07:07:44.322Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Windows安装教程"><a href="#Windows安装教程" class="headerlink" title="Windows安装教程"></a>Windows安装教程</h2><blockquote><p>近来由于安装各类课程软件较多，各种错误层出不穷且解决方法不一，重新安装系统解决一切问题，特此编写此Windows安装教程。</p></blockquote><a id="more"></a><h1 id="纯净版安装"><a href="#纯净版安装" class="headerlink" title="纯净版安装"></a>纯净版安装</h1><hr><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ul><li>8GBU盘</li><li>Windows原版系统</li><li>UltraISO软件</li></ul><blockquote><p>关于<code>系统镜像</code>推荐到<code>https://msdn.itellyou.cn/</code>下载，选择自己使用的系统版本。<br><code>UltraISO软件</code>直接百度就可以下载。</p></blockquote><hr><h2 id="刻录系统镜像到U盘"><a href="#刻录系统镜像到U盘" class="headerlink" title="刻录系统镜像到U盘"></a>刻录系统镜像到U盘</h2><p><strong>1、打开UltraISO软件，打开你下载好的系统镜像</strong><br><img src="http://ox94ls6xl.bkt.clouddn.com/Snipaste_2018-03-13_15-34-03.png" alt="这里写图片描述"></p><p><strong>2、点击菜单栏上面的<code>启动</code>，选择<code>写入硬盘映像</code></strong><br><img src="http://ox94ls6xl.bkt.clouddn.com/Snipaste_2018-03-13_15-35-16.png" alt="这里写图片描述"></p><blockquote><p>PS:刻录镜像到U盘会将U盘格式化，请注意保存自己的文件</p></blockquote><p><strong>3、选择<code>写入</code>，耐心等待写入U盘即可</strong><br><img src="http://ox94ls6xl.bkt.clouddn.com/Snipaste_2018-03-13_15-41-15.png" alt="这里写图片描述"></p><p><strong>4、系统镜像写入U盘之后可以到我的电脑看到系统结构目录</strong><br><img src="http://ox94ls6xl.bkt.clouddn.com/Snipaste_2018-03-13_15-36-51.png" alt="这里写图片描述"></p><hr><h2 id="安装Windows"><a href="#安装Windows" class="headerlink" title="安装Windows"></a>安装Windows</h2><p><strong>1、进入电脑Bios界面，选择第一启动项为<code>U盘</code>（具体请百度怎么进入以及设置）。</strong></p><p><strong>2、重启电脑之后便可以进入安装界面，按照提示即可安装Windows到自己的电脑。</strong></p><blockquote><p>在进行选择安装类型的时候，因为现在是全新安装Windows系统，所以选第二项<code>自定义（高级）</code></p></blockquote><hr><h2 id="常见错误解决方案（持续更新中……）"><a href="#常见错误解决方案（持续更新中……）" class="headerlink" title="常见错误解决方案（持续更新中……）"></a>常见错误解决方案（持续更新中……）</h2><p><strong>1、缺少所需的<code>CD/DVD</code>驱动器设备驱动程序</strong></p><ul><li>解决方法1：可以尝试更换USB接口（尽量更换为<code>USB2.0</code>）</li><li>解决方法2：在<code>BIOS</code>中<code>Config</code>下的<code>USB</code>下的<code>USB3.0 Mode</code>将默认的<code>Auto</code>选项更改为<code>Disabled</code>后再按<code>F10</code>保存即可（常见于联想ThinkPad）。安装好win7系统后，须重新进入BIOS开启USB3.0选项，否则无法正常安装USB3.0驱动。</li></ul><p><strong>2、windows无法安装到磁盘，选中的磁盘采用<code>gpt</code>分区</strong></p><ul><li><p>解决方法：</p><ol><li>在系统提示无法安装的那一步，按住<code>shift+f10</code>，弹出<code>cmd</code>命令符</li><li>输入<code>diskpart</code>，按回车键进入<code>diskpart</code>工具</li><li>输入<code>list disk</code>，回车键，可以显示磁盘信息</li><li>输入<code>select disk 0</code>，回车键，选择第0个磁盘（电脑的硬盘编号是从0开始的，选择你要安装的磁盘）</li><li>输入<code>clean</code>，回车，删除磁盘分区&amp;格式化</li><li>输入<code>convert mbr</code>，回车，将当前磁盘分区设置为mbr形式</li><li>输入<code>exit</code>，回车，退出<code>diskpart</code>，输入<code>exit</code>，回车，退出<code>cmd</code></li></ol></li></ul><blockquote><p>扩展：目前磁盘分区形式一般分为<code>两种</code>，一种为<code>MBR</code>，另一种为<code>GPT(GUID)</code><br>&nbsp;<br> 首先要先了解下系统启动的方式。一种是老式<code>BIOS启动(也叫legacy启动)</code>,另一种就是新式<code>UEFI启动</code>方式。<br> <code>BIOS</code>:磁盘分区为<code>MBR</code>形式，启动方式：<code>BIOS</code>-&gt;<code>MBR</code>-&gt;<code>PBR</code>-&gt;<code>boot</code>-&gt;<code>CLOVERX64.efi</code>- &gt;<code>OSLoader</code><br>  &nbsp;<br> <code>UEFI</code>::磁盘分区为<code>GPT(GUID)</code>形式，启动方式：<code>UEFI</code>-&gt;<code>CLOVERX64.efi</code>-&gt;<code>OSLoader</code></p></blockquote><p><img src="http://ox94ls6xl.bkt.clouddn.com/Snipaste_2018-03-13_22-57-32.png" alt="这里写图片描述"></p><h1 id="PE系统安装"><a href="#PE系统安装" class="headerlink" title="PE系统安装"></a>PE系统安装</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Windows安装教程&quot;&gt;&lt;a href=&quot;#Windows安装教程&quot; class=&quot;headerlink&quot; title=&quot;Windows安装教程&quot;&gt;&lt;/a&gt;Windows安装教程&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;近来由于安装各类课程软件较多，各种错误层出不穷且解决方法不一，重新安装系统解决一切问题，特此编写此Windows安装教程。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="电脑" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91/"/>
+    
+    
+      <category term="电脑" scheme="http://yoursite.com/tags/%E7%94%B5%E8%84%91/"/>
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+  </entry>
+  
+</feed>
